@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<link rel="stylesheet" type="text/css" media="all"
+ href="css/mycss.css" th:href="@{/css/mycss.css}" />
+
+<meta charset="ISO-8859-1">
+<title>Add Songs</title>
+</head>
+
+<body>
+<h1>Add Song</h1>
+    <form action="#" th:action="@{/add}" th:object="${song}" method="get">
+    	<p>Title: <input type="text" th:field="*{title}" /></p>
+        <p>Artist: <input type="text" th:field="*{artist}" /></p>
+        <p>Runtime: <input type="text" th:field="*{runtime}" /></p>
+       
+        <p>Genre: <select th:field="*{genre}" >
+        	<option th:each="g:*{genres}" th:value="${g}" th:text="${g}"/>
+        	</select></p>
+        <p><input type="submit" value="Submit" /> </p>
+    </form>
+<a href="/viewSongs" >View Songs </a>
+
+</body>
+</html>

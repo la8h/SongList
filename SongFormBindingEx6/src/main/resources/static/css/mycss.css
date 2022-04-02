@@ -1,0 +1,12 @@
+body{
+	background-color: coral;
+}
+h1{
+	font-family: cursive;
+}
+p{
+	font-family: cursive;
+}
+a, th,tr {
+	font-family: system-ui;
+}
